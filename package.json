@@ -1,6 +1,5 @@
 {
 	"dependencies": {
-		"@faker-js/faker": "^9.2.0",
-		"assert": "^2.1.0"
+		"@faker-js/faker": "^9.2.0"
 	}
 }
