@@ -7,13 +7,21 @@
 //   functions
 // - Print out your full name using the functions
 
-import { strict as assert } from "assert";
-// @ai-skip-start
-const  generateFirstName =(): string => {
-    return ;
+import { strict as assert } from 'assert';
+import { faker } from '@faker-js/faker';
 
-}
+const generateFirstName = (): string => {
+  return faker.person.firstName();
+};
+const generateLastName = (): string => {
+  return faker.person.lastName();
+};
+const generateFullName = (firstName: string, lastName: string): string => {
+  return `${firstName} ${lastName}`;
+};
+const printOutFullName = (firstName: string, lastName: string): string => {
+  const fullName = generateFullName(firstName, lastName);
+  return fullName;
+};
 
-
-// @ai-skip-end
-
+console.log(printOutFullName(generateFirstName(), generateLastName()));

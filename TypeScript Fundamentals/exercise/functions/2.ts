@@ -18,7 +18,19 @@
 import { strict as assert } from "assert";
 
 
-//
+const calculateRectangleArea = (width: number, height: number): number => {
+    return width * height;
+  };
+  
+  const calculateRectanglePerimeter = (width: number, height: number): number => {
+    return 2 * (width + height);
+  };
+  
+  const calculateCircleArea = (radius: number): number => {
+    const pi:number = 3.14;
+    return pi * radius * radius;
+  };
+
 // Test cases
 assert.equal(calculateRectangleArea(5, 10), 50);
 assert.equal(calculateRectanglePerimeter(5, 10), 30);

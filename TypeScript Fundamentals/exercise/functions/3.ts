@@ -18,7 +18,17 @@
 /* eslint-disable */
 
 import { strict as assert } from "assert";
+const sum = (number1: number, number2: number, number3: number): number => {
+    return number1 + number2 + number3;
+};
+const calculateAverage = (number1: number, number2: number, number3: number): number => {
+    const totalSum = sum(number1, number2, number3);
+    return totalSum / 3;
+};
 
+const isAboveThreshold = (average: number, threshold: number): boolean => {
+    return average > threshold;
+};
 
 //
 // Test cases

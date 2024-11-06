@@ -13,14 +13,26 @@
 //   `false` from this function.
 // - Print out whether a user is eligible for a discount.
 
-/* eslint-disable */
+import { strict as assert } from 'assert';
 
-import { strict as assert } from "assert";
+const seniorAge: number = 65;
 
+const isSenior = (age: number, establishedAge:number = seniorAge): boolean => {
+  return age >= establishedAge;
+};
+const isLargePurchase = (
+  purchaseTotal: number,
+  purchaseThreshold: number = 99
+): boolean => {
+  return purchaseTotal >= purchaseThreshold;
+};
 
-// 
+const isEligibleForDiscount = (age: number, purchaseTotal: number): boolean => {
+  return isSenior(age) || isLargePurchase(purchaseTotal);
+};
+
+//
 // Test cases
 assert.equal(isEligibleForDiscount(60, 90), false);
 assert.equal(isEligibleForDiscount(70, 90), true);
 assert.equal(isEligibleForDiscount(60, 100), true);
-
