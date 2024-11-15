@@ -19,7 +19,7 @@ assert.equal(grandTruck.year, 2021); // true
 
 assert.equal(familySuv.brand, 'Toyota'); // true
 
-//overwriting the properties of the Vehicle type alias with a more specific type
+//adding a new property to the Vehicle type. Takes in the properties from vehicle and unites it with the new property
 
 type VehicleWithSpecifics = Vehicle & {
   color: string;
