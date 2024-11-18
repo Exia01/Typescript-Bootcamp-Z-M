@@ -24,7 +24,7 @@
 
 // Change this to different values to check your program behavior.
 const currentTime = 1000; // Example: 10 AM
-
+//
 //
 // Put your code here to check if the store is open
 //
